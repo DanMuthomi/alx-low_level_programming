@@ -1,14 +1,20 @@
-#include <unistd.h>
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * main prints _putchar
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return is zero
  */
-int _putchar(char c)
+int main(void)
 {
-	return (write(1, &c, 1));
+	char put[] = {_, p, u, t, c, h, a, r};
+	int count, size;
+
+	size = sizeof(put) / sizeof(int);
+	for (count = 0; count < size; count++)
+	{
+		_putchar(str[count]);
+	}
+	_putchar('\n');
+	return (0);
 }
