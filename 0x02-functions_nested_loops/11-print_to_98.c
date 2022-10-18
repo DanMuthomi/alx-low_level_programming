@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
 * print_to_98 - prints from given no. to 98
@@ -9,22 +9,19 @@
 */
 void print_to_98(int n)
 {
-	if (n < 98)
+	if (n > 98)
 	{
-		_putchar(n);
-		_putchar(44);
-		_putchar(32);
-		n++;
+		for (; n > 98; n--)
+		{
+			printf("%d, ", n);
+		}
 	}
-	else if (n == 98)
+	else if (n < 98)
 	{
-		_putchar(n);
+		for (; n < 98; n++)
+		{
+			printf("%d, ", n);
+		}
 	}
-	else if (n > 98)
-	{
-		_putchar(n);
-		_putchar(44);
-		_putchar(32);
-		n--;
-	}
+	printf("%d\n", n);
 }
