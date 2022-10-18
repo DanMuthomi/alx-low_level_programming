@@ -20,13 +20,13 @@ void jack_bauer(void)
 					if (h1 >= 50 && h0 >= 52)
 					{
 						break;
+					}
 					_putchar(h1);
 					_putchar(h0);
 					_putchar(58);
 					_putchar(m1);
 					_putchar(m0);
 					_putchar('\n');
-					}
 				}
 			}
 		}
