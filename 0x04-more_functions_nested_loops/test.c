@@ -2,15 +2,17 @@
 
 int main()
 {
-	int i = 48;
+	int i = 0;
+	int j;
 
-	while (i <= 57)
+	while (i <= 9)
 	{
-		if (i == 50 || i == 52)
+		for (j = 0; j <= 14; j++)
 		{
-			i++;
+			printf(" %d ", j);
 		}
-		printf(" %d ", i);
+		printf(" \n ");
 		i++;
 	}
+	printf(" \n ");
 }
