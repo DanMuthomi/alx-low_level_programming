@@ -2,17 +2,18 @@
 
 int main()
 {
-	int i = 0;
-	int j;
+	int i;
+	int j = 0;
+	int n = 5;
 
-	while (i <= 9)
+	while (n > 0)
 	{
-		for (j = 0; j <= 14; j++)
+		for (i = 0; i <= j; i++)
 		{
-			printf(" %d ", j);
+			printf(" ");
 		}
-		printf(" \n ");
-		i++;
+	printf("\\");
+	j++;
+	n--;
 	}
-	printf(" \n ");
 }
