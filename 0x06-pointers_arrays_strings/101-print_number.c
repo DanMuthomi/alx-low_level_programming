@@ -10,18 +10,18 @@
 
 void print_number(int n)
 {
-	unsigned int num;
+	unsigned int y;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		num *= -num;
+		n *= -1;
 	}
-	num = n;
+	y = n;
 
-	if ((num / 10) > 0)
+	if (y / 10)
 	{
-		print_number(num / 10);
+		print_number(y / 10);
 	}
-	_putchar((num % 10) + '0');
+	_putchar(y % 10 + '0');
 }
