@@ -24,18 +24,18 @@ void puts_half(char *str)
 	}
 	lenstr = count;
 
-	if (count % 2 == 0)
+	if (count % 2 == 1)
 	{
 		for (lenstr / 2; lenstr <= count; lenstr++)
 		{
-			_putchar(str[count]);
+			_putchar(str[lenstr]);
 		}
 	}
 	else
 	{
 		for ((lenstr - 1) / 2; lenstr <= count; lenstr++)
 		{
-			_putchar(str[count]);
+			_putchar(str[lenstr]);
 		}
 	}
 }
