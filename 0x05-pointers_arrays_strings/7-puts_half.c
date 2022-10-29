@@ -22,21 +22,19 @@ void puts_half(char *str)
 		}
 		count++;
 	}
-	lenstr = count;
 
 	if (count % 2 == 1)
 	{
-		for (lenstr / 2; lenstr < count; lenstr++)
-		{
-			_putchar(str[lenstr]);
-		}
+		lenstr = count / 2;
 	}
 	else
 	{
-		for ((lenstr - 1) / 2; lenstr < count; lenstr++)
-		{
-			_putchar(str[lenstr]);
-		}
+		lenstr = (count - 1) / 2;
+	}
+
+	for (lenstr++; lenstr < count; lenstr++)
+	{
+		_putchar(str[lenstr]);
 	}
 	_putchar('\n');
 }
