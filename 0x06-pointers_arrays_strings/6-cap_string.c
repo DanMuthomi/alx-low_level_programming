@@ -10,26 +10,30 @@
 
 char *cap_string(char *str)
 {
-	int conversion, index, count;
-	char chars[] = {' ', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}',
-			 '\t', '\n', '\0'};
+	int index = 0;
 
-	conversion = 32;
-
-	for (index = 0; str[index] != '\0'; index++)
+	while (str[++index])
 	{
-		if (str[index] >= 'index' && str[index] <= 'z')
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
 		{
-			str[index] =  str[index] - conversion;
+			index++;
 		}
-		conversion = 0;
-		for (count = 0; chars[count] != '\0'; count++)
+
+		if (str[index - 1] == ' ' ||
+				str[index - 1] == '\t' ||
+				str[index - 1] == '\n' ||
+				str[index - 1] == ',' ||
+				str[index - 1] == ';' ||
+				str[index - 1] == '.' ||
+				str[index - 1] == '!' ||
+				str[index - 1] == '?' ||
+				str[index - 1] == '"' ||
+				str[index - 1] == '(' ||
+				str[index - 1] == ')' ||
+				str[index - 1] == '{' ||
+				str[index - 1] == '}')
 		{
-			if (chars[count] == str[index])
-			{
-				conversion = 32;
-				break;
-			}
+			str[index] -= 32;
 		}
 	}
 	return (str);
