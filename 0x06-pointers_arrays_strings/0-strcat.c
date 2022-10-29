@@ -6,23 +6,26 @@
 * @dest: destination
 * @src: source
 *
-* return: dest
+* Return: pointer to dest
 */
 
 char *_strcat(char *dest, char *src)
 {
-	int count1, count2;
+	int c1 = 0, c2 = 0;
 
-	count1 = 0;
-	count2 = 0;
-
-	while (dest[count1++])
+	while (*(dest + c1) != '\0')
 	{
-		count2++;
+		c1++;
 	}
-	for (count1 = 0; src[count1]; count1++)
+	while (c2 >= 0)
 	{
-		dest[count2++] = src[count];
+		*(dest + c1) = *(src + c2);
+		if (*(src + c2) == '\0')
+		{
+			break;
+		}
+		c1++;
+		c2++;
 	}
 	return (dest);
 }
