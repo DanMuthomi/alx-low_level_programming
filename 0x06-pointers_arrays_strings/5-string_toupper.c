@@ -5,7 +5,7 @@
 *
 * @str: parameter
 *
-* Returns the character
+* Return: the character
 */
 
 char *string_toupper(char *str)
