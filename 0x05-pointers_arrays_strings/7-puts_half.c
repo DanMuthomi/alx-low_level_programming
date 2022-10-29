@@ -26,16 +26,17 @@ void puts_half(char *str)
 
 	if (count % 2 == 1)
 	{
-		for (lenstr / 2; lenstr <= count; lenstr++)
+		for (lenstr / 2; lenstr < count; lenstr++)
 		{
 			_putchar(str[lenstr]);
 		}
 	}
 	else
 	{
-		for ((lenstr - 1) / 2; lenstr <= count; lenstr++)
+		for ((lenstr - 1) / 2; lenstr < count; lenstr++)
 		{
 			_putchar(str[lenstr]);
 		}
 	}
+	_putchar('\n');
 }
