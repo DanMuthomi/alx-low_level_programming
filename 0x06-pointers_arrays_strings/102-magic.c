@@ -1,5 +1,11 @@
 #include <stdio.h>
 
+/**
+* main: is allegedly meant to do some magic??
+*
+* Return: zero
+*/
+
 int main(void)
 {
 	int n;
