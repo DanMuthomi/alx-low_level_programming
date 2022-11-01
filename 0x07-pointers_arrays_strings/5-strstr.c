@@ -19,7 +19,7 @@ char *_strstr(char *haystack, char *needle)
 		haystack1 = haystack;
 		needle1 = needle;
 
-		while (*haystack != '\0' && *pneedle != '\0' && *haystack == *needle1)
+		while (*haystack != '\0' && *needle1 != '\0' && *haystack == *needle1)
 		{
 			haystack++;
 			needle1++;
