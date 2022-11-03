@@ -12,17 +12,10 @@
 
 int factorial(int n)
 {
-	int factorial = 1;
-	int i;
-
 	if (n < 0)
-	{
 		return (-1);
-	}
-
-	for (i = 1; i <= n; i++)
-	{
-		factorial = factorial * i;
-	}
-	return (factorial);
+	else if (n == 0)
+		return (1);
+	else
+		return (n * factorial(n - 1));
 }
