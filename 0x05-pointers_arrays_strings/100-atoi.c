@@ -1,6 +1,20 @@
 #include "main.h"
 
 /**
+* is_num - checks for int
+*
+* @n: integer
+*
+* Return: 1 if int
+*	  0 otherwise
+*/
+
+int is_num(unsigned int n)
+{
+	return (n >= '0' && n <= '9');
+}
+
+/**
 * _atoi - converts string to int
 *
 * @s: string to be converted
@@ -10,31 +24,24 @@
 
 int _atoi(char *s)
 {
-	unsigned int count, size, be, in, n, i;
+	unsigned int number, i;
+	int sign;
 
-	count = 0;
-	size = 0;
-	be = 0;
-	in = 1;
+	sign = 1;
+	number = 0;
 
-	while (*(s + count) != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
-			break;
-		if (*(s + count) == '-')
-			in *= -1;
-		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
+		if (is_numerical(s[i]))
 		{
-			if (size > 0)
-				n *= 10;
-			size++;
+			number = (s[i] - 48) + number * 10;
+			if (s[i + 1] == ' ')
+				break;
 		}
-		count++;
+		else if (s[i] == '-')
+		{
+			sign *= -1;
+		}
 	}
-	for (i = count - size; i < count; i++)
-	{
-		be = be + ((*(s + i) - 48) * n;
-		n /= 10;
-	}
-	return (be * in);
+	return (number * sign);
 }
