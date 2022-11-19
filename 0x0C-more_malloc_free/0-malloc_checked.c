@@ -10,15 +10,12 @@
 * if fail, return status value of 98
 */
 
-void *malloc_checked(insigned int b)
+void *malloc_checked(unsigned int b)
 {
-	char *c;
+	char *newb;
 
-	c = malloc(b);
-	if (c == NULL)
-	{
+	newb = malloc(b);
+	if (newb == NULL)
 		exit(98);
-	}
-
-	return (c);
+	return (newb);
 }
