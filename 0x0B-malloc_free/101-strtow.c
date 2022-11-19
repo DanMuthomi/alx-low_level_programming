@@ -18,6 +18,7 @@ void t_free_grid(int **grid, int height)
 		{
 			free(grid[height]);
 		}
+		free(grid[height]);
 		free(grid);
 	}
 }
@@ -27,7 +28,7 @@ void t_free_grid(int **grid, int height)
 *
 * @str: string
 *
-* return: pointer to array of words
+* Return: pointer to array of words
 */
 
 char **strtow(char *str)
